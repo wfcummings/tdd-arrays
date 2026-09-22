@@ -120,7 +120,16 @@ export function quintuple(numbers) {
  * pluralize([]); // []
  */
 export function pluralize(words) {
-  // TODO
+  let pluralWords = [];
+
+  for (const word of words) {
+    if (word.endsWith("s")) {
+      pluralWords.push(word + "es");
+    } else {
+      pluralWords.push(word + "s");
+    }
+  }
+  return pluralWords;
 }
 
 /**
