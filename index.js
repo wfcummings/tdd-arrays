@@ -89,6 +89,17 @@ export function sharesFirstLetter(str1, str2) {
  */
 export function quintuple(numbers) {
   // TODO
+  if (numbers.length === 0) {
+    return numbers;
+  }
+
+  let i = 0;
+
+  while (i < numbers.length) {
+    numbers[i] *= 5;
+    i += 1;
+  }
+  return numbers;
 }
 
 /**
