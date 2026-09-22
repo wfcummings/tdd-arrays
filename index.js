@@ -42,7 +42,14 @@ export function getLast(array) {
  * getFirstLast([42]); // [42]
  */
 export function getFirstLast(array) {
-  // TODO
+  const first = array[0];
+  const last = array[array.length - 1];
+
+  if (array.length === 0 || array.length === 1) {
+    return array;
+  } else {
+    return [first, last];
+  }
 }
 
 /**
