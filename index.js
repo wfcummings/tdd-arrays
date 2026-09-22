@@ -170,9 +170,18 @@ export function countAttendance(attendance) {
  * getLongestWord(["a", "ab", "abc"]); // "abc"
  */
 export function getLongestWord(sentence) {
-  // TODO
-}
+  if (sentence.length === 0) {
+    return null;
+  }
 
+  let longestWord = "";
+  for (const word of sentence) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
 /**
  * @param {string[]} playlist - an array of song titles
  * @param {string} song - the name of a song to find
