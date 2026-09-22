@@ -146,7 +146,15 @@ export function pluralize(words) {
  * countAttendance([]); // 0
  */
 export function countAttendance(attendance) {
-  // TODO
+  let count = 0;
+  for (const attendee of attendance) {
+    if (attendee === true) {
+      count += 1;
+    } else if (attendee === false) {
+      count += 0;
+    }
+  }
+  return count;
 }
 
 /**
