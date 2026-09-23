@@ -222,4 +222,13 @@ export function findSong(playlist, song) {
  */
 export function findSpy(map) {
   // TODO
+
+  for (let x = 0; x < map.length; x++) {
+    for (let y = 0; y < map[x].length; y++) {
+      if (map[x][y] === "spy") {
+        return [x, y];
+      }
+    }
+  }
+  return null;
 }
